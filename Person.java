@@ -1,16 +1,14 @@
 /**
  * Person
  */
-public class Person {
-  private String name; 
-  private String surname; 
-  private String sex; 
-  private String birthday; 
+public abstract class Person {
+  protected String name; 
+  protected String surname;  
+  protected String birthday; 
 
-  public Person(String n, String sn, String s, String bd ) {
+  public Person(String n, String sn, String bd ) {
     this.name = n; 
     this.surname = sn; 
-    this.sex = s; 
     this.birthday = bd; 
   }
 
@@ -22,10 +20,6 @@ public class Person {
     return surname; 
   }
 
-  public String getSex() {
-    return sex; 
-  }
-
   public String getBirthday() {
     return birthday; 
   }
@@ -35,7 +29,6 @@ public class Person {
     return "Person: " + 
             "name - " + name + 
             ", surname - " + surname + 
-            ", sex - " + sex + 
             ", birthday - " + birthday; 
   }
 }

@@ -6,5 +6,7 @@ public enum Role {
   SON,
   DAUGHTER,
   FATHER, 
-  MOTHER
+  MOTHER,
+  SISTER,
+  BROTHER
 }

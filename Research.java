@@ -1,6 +1,7 @@
 import java.util.List;
 
-public class Research {
+public class Research implements Inter{
+
   public static void printTree(String name ,Tree tree){
     List<Relation> relations = tree.getTree();
 
@@ -17,15 +18,15 @@ public class Research {
     }
   }
 
-  public static void printSex(String sex, Tree tree){
-    List<Relation> relations = tree.getTree();
+  // public static void printSex(String sex, Tree tree){
+  //   List<Relation> relations = tree.getTree();
 
-    for (Relation relation : relations) {
-      if(relation.getFirstPerson().getSex().equals(sex)){
-        System.out.println(relation.getFirstPerson());
-      }
-    }
-  }
+  //   for (Relation relation : relations) {
+  //     if(relation.getFirstPerson().getSex().equals(sex)){
+  //       System.out.println(relation.getFirstPerson());
+  //     }
+  //   }
+  // }
 
   public static void printAllList(Tree tree){
     List<Relation> relations = tree.getTree();
@@ -41,6 +42,16 @@ public class Research {
         System.out.println(relation.getSecondPerson());
       }
     }
+  }
+
+  @Override
+  public void printFathers(Tree tree) {
+    List<Relation> relations = tree.getTree();
+
+    for (Relation relation : relations) {
+      if(relation.getRole() == Role.FATHER) System.out.println(relation.getFirstPerson());
+    }
+    
   }
 
 }
