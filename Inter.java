@@ -1,3 +1,3 @@
 public interface Inter {
-  public void printFathers(Tree tree); 
+  void printFathers(Tree tree); 
 }

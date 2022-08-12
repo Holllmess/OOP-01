@@ -49,7 +49,9 @@ public class Research implements Inter{
     List<Relation> relations = tree.getTree();
 
     for (Relation relation : relations) {
-      if(relation.getRole() == Role.FATHER) System.out.println(relation.getFirstPerson());
+      if(relation.getRole() == Role.FATHER){
+        System.out.println(relation.getFirstPerson());
+      }
     }
     
   }

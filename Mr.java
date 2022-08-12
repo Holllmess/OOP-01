@@ -1,11 +1,12 @@
 public class Mr extends Person {
-  private String sex = "Male";
+  private Sex sex;
 
-  public Mr(String n, String sn, String bd) {
-    super(n, sn, bd);
+  public Mr(String name, String surname, int age) {
+    super(name, surname, age);
+    this.sex = Sex.MALE;
   }
   
-  public String getSex(){
+  public Sex getSex(){
     return sex;
   }
 }

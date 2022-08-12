@@ -4,12 +4,12 @@
 public abstract class Person {
   protected String name; 
   protected String surname;  
-  protected String birthday; 
+  protected int age; 
 
-  public Person(String n, String sn, String bd ) {
-    this.name = n; 
-    this.surname = sn; 
-    this.birthday = bd; 
+  public Person(String name, String surname, int age ) {
+    this.name = name; 
+    this.surname = surname; 
+    this.age = age; 
   }
 
   public String getName() {
@@ -20,8 +20,8 @@ public abstract class Person {
     return surname; 
   }
 
-  public String getBirthday() {
-    return birthday; 
+  public int getAge() {
+    return age; 
   }
 
   @Override
@@ -29,6 +29,6 @@ public abstract class Person {
     return "Person: " + 
             "name - " + name + 
             ", surname - " + surname + 
-            ", birthday - " + birthday; 
+            ", age - " + age; 
   }
 }
