@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class move {
   public static void main(String[] args) {
     // Person p1 = new Person("Dmitriy", "Spasskih", "Male", "23.06.2001");
@@ -5,9 +8,11 @@ public class move {
     // Person p3 = new Person("Mark", "Spasskih", "Male", "14.11.2033");
     // Person p4 = new Person("Helly", "R", "Female", "04.12.1974");
 
-    Mr p11 = new Mr("Erving", "S", "03.07.1959"); 
-    Mr p22 = new Mr("Tony", "G", "11.09.2001"); 
-    Ms p33 = new Ms("Vanda", "M", "23.09.2016");
+    Mr p11 = new Mr("Erving", "S", 54); 
+    Mr p22 = new Mr("Tony", "G", 69); 
+    Ms p33 = new Ms("Vanda", "M", 32);
+    Ms p44 = new Ms("Helly", "R", 28);
+    Ms p55 = new Ms("Anna", "T", 38);
 
 
     // Tree tree = new Tree();
@@ -31,7 +36,27 @@ public class move {
     // Research.printChildren(tree);
     // System.out.println(p11.getSex());
 
-    Inter nn = new Research();
-    nn.printFathers(tree);
+    // Inter nn = new Research();
+    // nn.printFathers(tree);
+
+    List<Person> list = new ArrayList<>();
+    list.add(p11);
+    list.add(p22);
+    list.add(p33);
+    list.add(p44);
+    list.add(p55);
+
+    list.sort(new PersonComp());
+    for (Person item : list) {
+      System.out.println(item);
+    }
+
+    System.out.println("-----------------");
+
+    list.sort((o1, o2) -> o1.getName().compareTo(o2.getName()));
+    for (Person item : list) {
+      System.out.println(item);
+    }
+
   }
 }
